@@ -1,0 +1,29 @@
+{
+  "name": "eslint-plugin-harkovets",
+  "version": "0.1.0",
+  "description": "Custom rules",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "Andrey Khar'kovets",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+    "requireindex": "~1.1.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "^7.2.14",
+    "@types/estree": "0.0.50",
+    "@types/node": "^16.0.3",
+    "eslint": "^7.1.0",
+    "mocha": "^7.2.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "ISC"
+}
