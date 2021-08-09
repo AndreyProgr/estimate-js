@@ -6,7 +6,8 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "./node_modules/.bin/eslint . --ext .ts --ext .tsx --ext .js --max-warnings 0"
   },
   "keywords": [],
   "author": "Andrey Khar'kovets",
