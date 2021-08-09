@@ -17,6 +17,7 @@ const JestConfig: Config.InitialOptions = {
       statements: 80,
     },
   },
+  // modulePathIgnorePatterns: ['.'],
   collectCoverageFrom: ['./src/**'],
   coveragePathIgnorePatterns: [
     '\\w+.json',

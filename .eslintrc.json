@@ -9,6 +9,9 @@
   "globals": {
     "__DEV__": "readonly"
   },
+  "ignorePatterns": [
+    "/lib/*"
+  ],
   "env": {
     "es6": true,
     "node": true,
