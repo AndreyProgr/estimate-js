@@ -9,6 +9,13 @@ const JestConfig: Config.InitialOptions = {
   moduleDirectories: ['node_modules', 'src'],
   notify: true,
   silent: true,
+  globals: {
+    'ts-jest': {
+      diagnostics: {
+        exclude: ['**/*.test.ts'],
+      },
+    },
+  },
   coverageThreshold: {
     global: {
       lines: 80,
