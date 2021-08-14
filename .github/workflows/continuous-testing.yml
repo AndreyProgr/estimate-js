@@ -5,7 +5,7 @@ on:
       - develop
       - master
 jobs:
-  Automated-Checks:
+  Continuous-Testing:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
