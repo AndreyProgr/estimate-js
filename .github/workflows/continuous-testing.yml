@@ -8,17 +8,19 @@ jobs:
   Automated-Checks:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Enviroment check
+      - run: |
+          npm -v
+          node -v
+          echo "Triggered by a ${{ github.event_name }} event."
+          echo "Running on a ${{ runner.os }} server."
+          echo "Running from branch ${{ github.ref }} in ${{ github.repository }} repository."
       - name: Check out repository code
         uses: actions/checkout@v2
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: Enviroment preparation
+      - name: Enviroment setup
         run: npm ci
-      - name: ESLint check
+      - name: ESLint
         run: npm run lint
-      - name: Jest check
+      - name: Jest
         run: npm run test
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - run: echo "Finished with status ${{ job.status }}."
