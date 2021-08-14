@@ -9,7 +9,6 @@
   "testRunner": "jest",
   "coverageAnalysis": "perTest",
   "mutator": { "plugins": ["typescript"] },
-  "transpilers": ["typescript"],
   "tsconfigFile": "tsconfig.json",
   "jest": {
     "configFile": "jest.config.json"
