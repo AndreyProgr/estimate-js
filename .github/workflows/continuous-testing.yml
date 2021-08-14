@@ -1,5 +1,9 @@
 name: Continuous Testing
-on: [push]
+on:
+  pull_request:
+    branches:
+      - develop
+      - master
 jobs:
   Automated-Checks:
     runs-on: ubuntu-latest
