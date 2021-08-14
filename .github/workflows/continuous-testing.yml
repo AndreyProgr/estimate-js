@@ -8,19 +8,17 @@ jobs:
   Automated-Checks:
     runs-on: ubuntu-latest
     steps:
-      - name: Enviroment check
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Enviroment setup
         run: |
           npm -v
           node -v
           echo "Triggered by a ${{ github.event_name }} event."
           echo "Running on a ${{ runner.os }} server."
           echo "Running from branch ${{ github.ref }} in ${{ github.repository }} repository."
-      - name: Check out repository code
-        uses: actions/checkout@v2
-      - name: Enviroment setup
-        run: npm ci
+          npm ci
       - name: ESLint
         run: npm run lint
       - name: Jest
         run: npm run test
-      - run: echo "Finished with status ${{ job.status }}."
