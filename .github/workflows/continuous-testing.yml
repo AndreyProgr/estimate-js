@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Enviroment check
-      - run: |
+        run: |
           npm -v
           node -v
           echo "Triggered by a ${{ github.event_name }} event."
