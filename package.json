@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "stryker": "stryker run",
     "test": "jest --runInBand",
     "lint": "./node_modules/.bin/eslint . --ext .ts --ext .tsx --ext .js --max-warnings 0"
   },
@@ -13,6 +14,8 @@
   "author": "Andrey Khar'kovets",
   "license": "MIT",
   "devDependencies": {
+    "@stryker-mutator/jest-runner": "^5.3.0",
+    "@stryker-mutator/core": "5.3.0",
     "@types/jest": "^26.0.24",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",

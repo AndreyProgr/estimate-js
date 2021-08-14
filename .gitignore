@@ -1,3 +1,6 @@
 node_modules
 test_reports
 /dist
+
+# stryker temp files
+.stryker-tmp
