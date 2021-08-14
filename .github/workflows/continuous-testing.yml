@@ -20,11 +20,12 @@ jobs:
           npm ci
           npm install -g typescript
           npm install -g stryker-cli
+          npm install --save-dev stryker
       - name: ESLint
         run: npm run lint
       - name: Jest
         run: npm run test
       - name: Stryker Mutator
-        run: npm run test-mutation
+        run: npm run stryker
       - name: Build
         run: npm run build

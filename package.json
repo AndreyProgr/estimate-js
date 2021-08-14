@@ -6,8 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "stryker": "stryker run",
     "test": "jest --runInBand",
-    "test-mutation": "stryker run",
     "lint": "./node_modules/.bin/eslint . --ext .ts --ext .tsx --ext .js --max-warnings 0"
   },
   "keywords": [],
