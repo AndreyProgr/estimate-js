@@ -5,7 +5,7 @@ on:
       - develop
       - master
 jobs:
-  Automated-Checks:
+  Continuous-Testing:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -20,11 +20,11 @@ jobs:
           npm ci
           npm install -g typescript
           npm install -g stryker-cli
-      - name: ESLint
+      - name: ESLint (static code analysis)
         run: npm run lint
-      - name: Jest
+      - name: Jest (unit testing)
         run: npm run test
-      - name: Stryker Mutator
+      - name: Stryker Mutator (mutation testing)
         run: npm run stryker
       - name: Build
         run: npm run build
