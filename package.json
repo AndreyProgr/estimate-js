@@ -2,8 +2,8 @@
   "name": "estimate-js",
   "version": "1.0.0",
   "description": "Set of tools for estimation.",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc",
