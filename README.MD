@@ -1,6 +1,6 @@
 [![GitHub license](https://img.shields.io/github/license/AndreyProgr/estimate-js)](https://github.com/AndreyProgr/estimate-js/blob/develop/LICENSE)
 
-Estimation tools presented as a set of immutable entities:
+Estimation tools set. Currently supported entities:
   - 3-Point
   - PERT
 
@@ -23,7 +23,7 @@ Import required entities to you code:
   import { ThreePointEstimate, PertEstimate } from 'estimate-js';
 ```
 
-Perform calculations you need:
+Perform operations you need:
 
 ```
   const threePointEstimate = new ThreePointEstimate(2, 3, 5);
@@ -37,8 +37,4 @@ Perform calculations you need:
 
 ## Contribution
 
-Feel free to push new features with GitHub Pull Requests. Remember to keep your PR's small.
-
-## License
-
-&nbsp;&nbsp;MIT
+Feel free to push new features and fixes with GitHub Pull Requests. Remember to keep your PRs small and use GitFlow branch prefixes.
