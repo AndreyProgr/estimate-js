@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest",
     "build": "tsc",
+    "test": "jest --runInBand",
     "lint": "./node_modules/.bin/eslint . --ext .ts --ext .tsx --ext .js --max-warnings 0"
   },
   "keywords": [],
