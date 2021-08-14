@@ -19,6 +19,7 @@ jobs:
           echo "Running from branch ${{ github.ref }} in ${{ github.repository }} repository."
           npm ci
           npm install -g typescript
+          npm install -g stryker-cli
       - name: ESLint
         run: npm run lint
       - name: Jest
