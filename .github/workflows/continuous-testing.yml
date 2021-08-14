@@ -23,5 +23,7 @@ jobs:
         run: npm run lint
       - name: Jest
         run: npm run test
+      - name: Stryker Mutator
+        run: npm run test-mutation
       - name: Build
         run: npm run build
