@@ -18,7 +18,10 @@ jobs:
           echo "Running on a ${{ runner.os }} server."
           echo "Running from branch ${{ github.ref }} in ${{ github.repository }} repository."
           npm ci
+          npm install -g typescript
       - name: ESLint
         run: npm run lint
       - name: Jest
         run: npm run test
+      - name: Build
+        run: npm run build
