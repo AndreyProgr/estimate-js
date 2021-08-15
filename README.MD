@@ -1,5 +1,6 @@
 ![Continuous Testing](https://github.com/AndreyProgr/estimate-js/actions/workflows/continuous-testing.yml/badge.svg?branch=develop)
 [![GitHub license](https://img.shields.io/github/license/AndreyProgr/estimate-js)](https://github.com/AndreyProgr/estimate-js/blob/develop/LICENSE)
+[![GitHub forks](https://img.shields.io/github/forks/AndreyProgr/estimate-js)](https://github.com/AndreyProgr/estimate-js/network)
 
 Estimation tools set. Currently supported entities:
   - 3-Point
