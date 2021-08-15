@@ -5,7 +5,7 @@
 Estimation tools set. Currently supported entities:
   - 3-Point
   - PERT
-
+ 
 ## Installation
 
 With NPM:
