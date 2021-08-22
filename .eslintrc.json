@@ -10,7 +10,7 @@
     "__DEV__": "readonly"
   },
   "ignorePatterns": [
-    "/lib/*"
+    "/dist/*"
   ],
   "env": {
     "es6": true,
