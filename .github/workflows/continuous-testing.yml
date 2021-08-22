@@ -10,10 +10,11 @@ on:
       - master
 jobs:
   Continuous-Testing:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         node-version: [10.x, 12.x, 14.x, 15.x]
+        os: [ubuntu-latest, macOS-latest, windows-latest]
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
