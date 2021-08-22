@@ -31,7 +31,6 @@ jobs:
           echo "Running on a ${{ runner.os }} server."
           echo "Running from branch ${{ github.ref }} in ${{ github.repository }} repository."
           npm ci
-          npm install -g eslint-cli
           npm install -g typescript
           npm install -g stryker-cli
       - name: ESLint (static code analysis)
