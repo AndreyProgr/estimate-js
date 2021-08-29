@@ -1,14 +1,26 @@
 name: Continuous Testing
 on:
-  push:
-    branches:
-      - develop
-      - master
   pull_request:
     branches:
-      - develop
       - master
 jobs:
+
+  Conventional-Commits-Check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Use Node.js v14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Enviroment setup
+        run: npm ci
+      - name: PR commits check
+        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+
   Continuous-Testing:
     runs-on: ${{ matrix.os }}
     strategy:
@@ -19,8 +31,6 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
@@ -35,8 +45,6 @@ jobs:
           npm ci
           npm install -g typescript
           npm install -g stryker-cli
-      - name: Conventional Commits check
-        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
       - name: ESLint (static code analysis)
         run: npm run lint
       - name: Jest (unit testing)
