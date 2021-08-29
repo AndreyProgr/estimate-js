@@ -1,11 +1,13 @@
 {
   "name": "estimate-js",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "description": "Set of tools for estimation.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "cz": "npx cz",
     "build": "tsc",
+    "commit": "npx cz",
     "stryker": "stryker run",
     "test": "jest --runInBand",
     "lint": "npx eslint . --ext .ts --ext .js --max-warnings 0"
@@ -14,11 +16,12 @@
   "author": "Andrey Khar'kovets",
   "license": "MIT",
   "devDependencies": {
-    "@stryker-mutator/jest-runner": "^5.3.0",
     "@stryker-mutator/core": "5.3.0",
+    "@stryker-mutator/jest-runner": "^5.3.0",
     "@types/jest": "^26.0.24",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
     "@typescript-eslint/parser": "^4.26.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "7.14.0",
     "eslint-plugin-harkovets": "file:eslint-rules",
     "eslint-plugin-react": "^7.24.0",
@@ -28,7 +31,16 @@
     "ts-node": "^10.1.0",
     "typescript": "^4.3.5"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AndreyProgr/estimate-js.git"
+  },
   "dependencies": {
     "yup": "^0.32.9"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
