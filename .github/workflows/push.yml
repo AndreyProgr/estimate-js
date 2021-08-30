@@ -1,0 +1,81 @@
+name: Continuous Deployment
+on:
+  push:
+    branches:
+      - master
+jobs:
+
+  Conventional-Commits-Check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Use Node.js v14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Enviroment setup
+        run: npm ci
+      - name: PR commits check
+        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+
+  Continuous-Testing:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [12.x, 14.x, 15.x, 16.x]
+        os: [ubuntu-latest, macOS-latest, windows-latest]
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Enviroment setup
+        run: |
+          npm -v
+          node -v
+          echo "Triggered by a ${{ github.event_name }} event."
+          echo "Running on a ${{ runner.os }} server."
+          echo "Running from branch ${{ github.ref }} in ${{ github.repository }} repository."
+          npm ci
+          npm install -g typescript
+          npm install -g stryker-cli
+      - name: ESLint (static code analysis)
+        run: npm run lint
+      - name: Jest (unit testing)
+        run: npm run test
+      - name: Stryker Mutator (mutation testing)
+        run: npm run stryker
+      - name: Build
+        run: npm run build
+
+  Deployment:
+    runs-on: ubuntu-latest
+    needs: [Conventional-Commits-Check, Continuous-Testing]
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Use Node.js v14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Enviroment setup
+        run: |
+          npm -v
+          node -v
+          npm ci
+          npm install -g typescript
+      - name: Build
+        run: npm run build
+      - name: Release
+        run: npm run release
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
