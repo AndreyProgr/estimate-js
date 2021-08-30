@@ -1,11 +1,11 @@
-import PertEstimateClass from './PertEstimate';
+import PERTEstimateClass from './PERTEstimate';
 import ThreePointEstimateClass from './ThreePointEstimate';
 
-export const PertEstimate = PertEstimateClass;
+export const PERTEstimate = PERTEstimateClass;
 export const ThreePointEstimate = ThreePointEstimateClass;
 
 const EstimateJS = {
-  PertEstimate,
+  PERTEstimate,
   ThreePointEstimate,
 };
 export default EstimateJS;
