@@ -10,7 +10,8 @@
     "commit": "npx cz",
     "stryker": "stryker run",
     "test": "jest --runInBand",
-    "lint": "npx eslint . --ext .ts --ext .js --max-warnings 0"
+    "lint": "npx eslint . --ext .ts --ext .js --max-warnings 0",
+    "release": "semantic-release --branches master"
   },
   "keywords": [],
   "author": "Andrey Khar'kovets",
@@ -31,11 +32,12 @@
     "node-notifier": "^10.0.0",
     "ts-jest": "^27.0.4",
     "ts-node": "^10.1.0",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "semantic-release": "^17.4.7"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/AndreyProgr/estimate-js.git"
+    "url": "https://github.com/AndreyProgr/estimate-js.git"
   },
   "dependencies": {
     "yup": "^0.32.9"
