@@ -1,4 +1,4 @@
-[![Continuous Testing](https://github.com/AndreyProgr/estimate-js/actions/workflows/continuous-testing.yml/badge.svg?branch=develop)](https://github.com/AndreyProgr/estimate-js/actions)
+[![Continuous Deployment](https://github.com/AndreyProgr/estimate-js/actions/workflows/push.yml/badge.svg?branch=master)](https://github.com/AndreyProgr/estimate-js/actions)
 [![GitHub license](https://img.shields.io/github/license/AndreyProgr/estimate-js)](https://github.com/AndreyProgr/estimate-js/blob/master/LICENSE)
 [![GitHub forks](https://img.shields.io/github/forks/AndreyProgr/estimate-js)](https://github.com/AndreyProgr/estimate-js/network)
 
