@@ -13,6 +13,11 @@
     "lint": "npx eslint . --ext .ts --ext .js --max-warnings 0",
     "release": "semantic-release --branches master"
   },
+  "files": [
+    "dist/",
+    "LICENSE",
+    "README.MD"
+  ],
   "keywords": [],
   "author": "Andrey Khar'kovets",
   "license": "MIT",

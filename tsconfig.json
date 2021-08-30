@@ -4,11 +4,9 @@
     "outDir": "./dist",
     "module": "CommonJS",
     "strict": true,
-    "sourceMap": true,
     "declaration": true,
-    "declarationMap": true,
     "esModuleInterop": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*", "**/*.test.ts"]
+  "exclude": ["node_modules", "**/__tests__/*", "**/*.test.ts", "dist/**/*"]
 }
