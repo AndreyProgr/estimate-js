@@ -11,7 +11,8 @@
     "stryker": "stryker run",
     "test": "jest --runInBand",
     "lint": "npx eslint . --ext .ts --ext .js --max-warnings 0",
-    "release": "semantic-release --branches master"
+    "release": "semantic-release --branches master",
+    "commitlint": "npx commitlint --from $(git merge-base origin/master $(git rev-parse --abbrev-ref HEAD)) --to $(git rev-parse HEAD) --verbose"
   },
   "files": [
     "dist/",
