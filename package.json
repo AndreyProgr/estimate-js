@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "cz": "npx cz",
-    "build": "tsc",
+    "build": "npx webpack",
     "commit": "npx cz",
     "stryker": "stryker run",
     "test": "jest --runInBand",
@@ -36,10 +36,13 @@
     "eslint-plugin-react": "^7.24.0",
     "jest": "^27.0.6",
     "node-notifier": "^10.0.0",
+    "semantic-release": "^17.4.7",
     "ts-jest": "^27.0.4",
+    "ts-loader": "^9.2.6",
     "ts-node": "^10.1.0",
     "typescript": "^4.3.5",
-    "semantic-release": "^17.4.7"
+    "webpack-cli": "^4.9.1",
+    "webpack-node-externals": "^3.0.0"
   },
   "repository": {
     "type": "git",
