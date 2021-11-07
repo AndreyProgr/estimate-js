@@ -42,7 +42,3 @@ Perform operations you need:
   // 95% prob.
   console.log(E - (2 * SD), '-', E + (2 * SD));
 ```
-
-## Contribution
-
-Feel free to push new features and fixes with GitHub Pull Requests. Remember to keep your PRs small and use GitFlow branch prefixes.
