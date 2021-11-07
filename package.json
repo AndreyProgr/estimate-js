@@ -63,7 +63,21 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "./node_modules/cz-conventional-changelog",
+      "types": {
+        "feat": {
+          "title": "feat",
+          "description": "A new feature"
+        },
+        "fix": {
+          "title": "fix",
+          "description": "A bug fix (also recommended for end user docs change)"
+        },
+        "chore": {
+          "title": "chore",
+          "description": "Other changes that don't modify build output & end user docs"
+        }
+      }
     }
   }
 }
