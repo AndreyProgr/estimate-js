@@ -52,3 +52,5 @@ jobs:
         run: npm run stryker
       - name: Build
         run: npm run build
+      - name: Size check
+        run: npm run check-build-size
