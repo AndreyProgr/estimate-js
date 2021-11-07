@@ -1,6 +1,7 @@
 [![Continuous Deployment](https://github.com/AndreyProgr/estimate-js/actions/workflows/push.yml/badge.svg?branch=master)](https://github.com/AndreyProgr/estimate-js/actions)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![GitHub license](https://img.shields.io/github/license/AndreyProgr/estimate-js)](https://github.com/AndreyProgr/estimate-js/blob/master/LICENSE)
+[![stable](https://badges.github.io/stability-badges/dist/stable.svg)](https://github.com/badges/stability-badges)
 
 
 Estimation tools set. Currently supported entities:
