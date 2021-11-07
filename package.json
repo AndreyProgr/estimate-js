@@ -6,10 +6,11 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "cz": "npx cz",
-    "build": "npx webpack",
     "commit": "npx cz",
+    "build": "npx webpack",
     "stryker": "stryker run",
     "test": "jest --runInBand",
+    "check-build-size": "size-limit",
     "lint": "npx eslint . --ext .ts --ext .js --max-warnings 0",
     "release": "semantic-release --branches master",
     "commitlint": "npx commitlint --from $(git merge-base origin/master $(git rev-parse --abbrev-ref HEAD)) --to $(git rev-parse HEAD) --verbose"
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@size-limit/preset-small-lib": "^6.0.4",
     "@stryker-mutator/core": "5.3.0",
     "@stryker-mutator/jest-runner": "^5.3.0",
     "@types/jest": "^26.0.24",
@@ -37,6 +39,7 @@
     "jest": "^27.0.6",
     "node-notifier": "^10.0.0",
     "semantic-release": "^17.4.7",
+    "size-limit": "^6.0.4",
     "ts-jest": "^27.0.4",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.1.0",
@@ -44,6 +47,13 @@
     "webpack-cli": "^4.9.1",
     "webpack-node-externals": "^3.0.0"
   },
+  "size-limit": [
+    {
+      "limit": "5 kB",
+      "webpack": false,
+      "path": "./dist/index.js"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/AndreyProgr/estimate-js.git"
