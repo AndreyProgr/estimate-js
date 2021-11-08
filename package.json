@@ -20,7 +20,7 @@
     "LICENSE",
     "README.MD"
   ],
-  "keywords": [],
+  "keywords": ["estimation", "PERT", "3 point estimation", "3-point", "critical path", "project management"],
   "author": "Andrey Khar'kovets",
   "license": "MIT",
   "devDependencies": {
