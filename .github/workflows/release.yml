@@ -1,15 +1,14 @@
-name: Continuous Deployment
+name: Release
 
 on:
-  workflow_call:
-    secrets:
-      NPM_TOKEN:
-        required: true
-      GITHUB_TOKEN:
-        required: true
+  workflow_run:
+    workflows: ["Test"]
+    branches: [master]
+    types: 
+      - completed
 
 jobs:
-  Continuous-Deployment:
+  Release:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -25,8 +24,6 @@ jobs:
           npm -v
           node -v
           npm ci
-      - name: Jest (unit testing)
-        run: npm run test
       - name: Build
         run: npm run build
       - name: Release
