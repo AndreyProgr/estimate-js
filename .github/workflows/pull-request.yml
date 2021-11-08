@@ -6,20 +6,7 @@ on:
 jobs:
 
   Conventional-Commits-Check:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository code
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Use Node.js v14
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14
-      - name: Enviroment setup
-        run: npm ci
-      - name: PR commits check
-        run: npm run commitlint
+    uses: AndreyProgr/estimate-js/.github/workflows/conventional-commits-check.yml@738b6b41618f09dc0eb74d1ff8cd4bab8960bd4f
 
   Continuous-Testing:
     runs-on: ${{ matrix.os }}
