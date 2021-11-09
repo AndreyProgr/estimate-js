@@ -36,8 +36,8 @@ jobs:
         run: npm run lint
       - name: Jest (unit testing)
         run: npm run test
-      - name: Stryker Mutator (mutation testing)
-        run: npm run stryker
+      - name: Mutation testing (Stryker)
+        run: npm run mutation-test
       - name: Build
         run: npm run build
       - name: Size check
