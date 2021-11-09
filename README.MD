@@ -1,4 +1,4 @@
-[![Continuous Deployment](https://github.com/AndreyProgr/estimate-js/actions/workflows/push.yml/badge.svg?branch=master)](https://github.com/AndreyProgr/estimate-js/actions)
+[![Release](https://github.com/AndreyProgr/estimate-js/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/AndreyProgr/estimate-js/actions)
 [![stable](https://badges.github.io/stability-badges/dist/stable.svg)](https://github.com/badges/stability-badges)
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
