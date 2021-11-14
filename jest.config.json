@@ -36,6 +36,7 @@
     "__snapshots__"
   ],
   "coverageReporters": [
+    "lcov",
     "json-summary",
     "html"
   ]

@@ -1,0 +1,32 @@
+name: CodeClimate
+
+on:
+  workflow_run:
+    workflows: ["Test"]
+    branches: [master]
+    types:
+      - completed
+
+jobs:
+  Coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Use Node.js v14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Enviroment setup
+        run: npm ci
+      - name: Jest (unit testing)
+        run: npm run test
+      - name: Codeclimate collect coverage
+        uses: paambaati/codeclimate-action@v3.0.0
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CODECLIMATE_REPORTER_ID }}
+        with:
+          coverageLocations: |
+            ${{github.workspace}}/test_reports/lcov.info:lcov
