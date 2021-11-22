@@ -14,6 +14,14 @@ Estimation tools set. Currently supported entities:
   - 3-Point
   - PERT
 
+## Try it out
+
+Want to get a quick demo before using it? Press the button below.
+
+<a href="https://codesandbox.io/s/estimate-js-playground-gzwym?expanddevtools=1&fontsize=14&hidenavigation=1&theme=dark" target="_blank">
+  <img alt="Edit Estimate JS playground" src="https://codesandbox.io/static/img/play-codesandbox.svg">
+</a>
+
 ## Installation
 
 With NPM:
